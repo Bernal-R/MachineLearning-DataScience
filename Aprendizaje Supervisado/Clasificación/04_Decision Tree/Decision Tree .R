@@ -55,6 +55,6 @@ dtree_fit_gini #Ver modelo entrenado
 
 prp(dtree_fit_gini$finalModel, box.palette = "Blues", tweak = 1.2) #Generar modelo gr??fico
 
-# * Predicci??n con Coficiente de Gini *
+# * Prediccion con Coficiente de Gini *
 test_pred_gini <- predict(dtree_fit_gini, newdata = testing)
 confusionMatrix(test_pred_gini, testing$V7 )  #Revisar Accuracy
