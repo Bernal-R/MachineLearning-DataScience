@@ -4,14 +4,14 @@
 grasas <- read.table("http://www.uam.es/joser.berrendero/datos/EdadPesoGrasas.txt", header = TRUE)
 
 #==================== 2.Corelacion lineal de datos ==================== 
-cor(grasas)    #Ver la corelaci??n numericamente
-pairs(grasas)  #Ver la corelaci??n graficamente
+cor(grasas)    #Ver la corelacion numericamente
+pairs(grasas)  #Ver la corelacion graficamente
 
 #==================== 3.Calculo de regresion ==================== 
 regresion <- lm(grasas ~ edad, data = grasas) 
 summary(regresion) #Estadisticas descriptivas de la regresion
 
-#==================== 4.Generar gr??fico ==================== 
+#==================== 4.Generar grafico ==================== 
 plot(grasas$edad, grasas$grasas, xlab = "Edad", ylab = "Grasas") #Genera grafico
 abline(regresion, col = "green") #Genera linea de regresion
 
