@@ -16,5 +16,5 @@ Nuestros salidas de clasificación son:
 *	safety	=> low, med, high
 *	Car Evaluation –  Target Variable	=> unacc, acc, good, vgood
 
-##Nuestra tarea:
+## Nuestra tarea:
 Encontrar el perfil de auto (combinación de esas características), que tenga mayor posibilidad de aceptación por parte del mercado.
