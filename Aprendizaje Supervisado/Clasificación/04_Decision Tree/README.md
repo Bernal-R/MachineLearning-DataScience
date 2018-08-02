@@ -1,6 +1,22 @@
 ### Arbol de Decisión Clasificador
-## Ejemplo:
-En este ejemplo realizamos la predicción de la aceptación que tendrán nuevos vehículos al mercado.
+## Contexto:
+Somos contratados como científicos de datos en una de las mejores compañías en la industria automotiz. La compañía desea sacar al mercado un nuevo un auto, pero usted sugiere realizar una encuesta a los clientes pasados para poder predecir cuál combinación de auto será mejor aceptada en el mercado, por lo que en la encuesta se ecuentra:
+
+* Velocidad en la compra
+* Velocidad en el mantenimiento
+* Número de puertas del vehículo
+* Número de pasajeros del vehículo
+* Tamaño del maletero
+* Seguridad del vehículo
+* Conformidad con el vehículo 
+
+
+## Nuestra tarea:
+Encontrar el perfil de auto (combinación de esas características), que tenga mayor posibilidad de aceptación por parte del mercado. Para aumentar las ventas de la compañía. 
+
+
+## Base de Datos:
+
 Nuestros salidas de clasificación son: 
 * Inaceptable => unacc
 * Aceptable => acc 
@@ -16,5 +32,3 @@ Nuestros salidas de clasificación son:
 *	safety	=> low, med, high
 *	Car Evaluation –  Target Variable	=> unacc, acc, good, vgood
 
-## Nuestra tarea:
-Encontrar el perfil de auto (combinación de esas características), que tenga mayor posibilidad de aceptación por parte del mercado.
