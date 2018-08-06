@@ -5,22 +5,25 @@
 library(C50)
 library(rpart)
 library(rpart.plot) 
-data(churn); # carga tablas
+library(caret)
 
-Variables      <-c(4,7,16,19,17,20)               # variables elegidas
-Entrenamiento  <-churnTrain[,Variables]           # tabla entrenamiento
-Test           <-churnTest [,Variables]           # tabla  Test
+setwd("/Users/bernalrojas/Documents")
+clientes = read.csv("DataBase_clients.csv", header = TRUE, dec = ".", sep = ",")
 
+intrain <- createDataPartition(y = clientes$churn, p= 0.63, list = FALSE) # 63% - 37%
+Entrenamiento <- clientes[intrain,]
+Test <- clientes[-intrain,]
 
 # PASO 2:   Crea Arbol de Decision
 # ---------------------------------------------------------------------------
-ModeloArbol<-rpart(churn ~ .,data=Entrenamiento,parms=list(split="information"))
+ModeloArbol<-rpart(clientes ~ .,data=Entrenamiento,parms=list(split="information"))
 
 
-# PASO 3:  Predice Desafiliaci??n en datos de TEST
+# PASO 3:  Predice Desafiliación en datos de TEST
 # ---------------------------------------------------------------------------
-Prediccion <- predict(ModeloArbol, Test,type="class") # Prediccci??n en Test
-MC         <- table(Test[, "churn"],Prediccion) # Matriz de Confusi??n
+Prediccion <- predict(ModeloArbol, Test,type="class") # Prediccción en Test
+MC         <- table(Test[, "churn"],Prediccion) # Matriz de Confusión
+
 
 # PASO 4: Crea Grafico
 # ---------------------------------------------------------------------------
